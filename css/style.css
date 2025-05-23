@@ -1,0 +1,94 @@
+/* Estilo base do corpo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #212529;
+}
+
+/* Navegação */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Cartões de postagem */
+.card {
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body h5 {
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  color: #343a40;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Imagem do post */
+.card-img-top {
+  width: 100%;
+  max-height: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 180px;
+  }
+}
+
+/* Botão */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+button.btn-secondary {
+  font-weight: 600;
+}
+
+/* Rodapé */
+footer {
+  background-color: #222;
+  margin-top: 80px;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin: 0;
+}

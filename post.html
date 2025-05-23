@@ -5,36 +5,38 @@
   <title>Amanda's Blog - Postagem</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </head>
-<body>
+<body ng-controller="PostagemController">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Amanda's Blog</a>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Amanda's Blog</a>
+    </div>
+  </nav>
 
-<div class="container mt-5" ng-controller="PostagemController">
-  <div class="card" ng-if="postagem">
-    <img ng-src="{{ postagem.thumbImage }}" class="card-img-top" alt="Imagem do post" />
-    <div class="card-body">
-      <h5 class="card-title">{{ postagem.title }}</h5>
-      <p class="card-text">{{ postagem.description }}</p>
-      <p class="card-text">{{ postagem.content }}</p> 
+  <div class="container mt-5">
+    <a href="index.html" class="btn btn-secondary mb-4">← Voltar</a>
+    <div class="card" ng-if="postagem">
+      <img ng-src="{{ postagem.thumbImage }}" class="card-img-top" alt="Imagem do post" />
+      <div class="card-body">
+        <h5 class="card-title">{{ postagem.title }}</h5>
+        <p class="card-text">{{ postagem.description }}</p>
+        <p class="card-text">{{ postagem.content }}</p> 
+      </div>
+    </div>
+
+    <div ng-if="!postagem">
+      <p>Carregando postagem...</p>
     </div>
   </div>
-  <div ng-if="!postagem">
-    <p>Carregando postagem...</p>
-  </div>
-</div>
 
-
-<footer class="bg-dark text-white text-center py-4 mt-5">
-  <p class="mb-0">&copy; 2025 Amanda's Blog. Todos os direitos reservados.</p>
-</footer>
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <p class="mb-0">&copy; 2025 Amanda's Blog. Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>
